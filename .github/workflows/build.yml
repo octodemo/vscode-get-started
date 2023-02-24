@@ -13,10 +13,8 @@ jobs:
       - uses: actions/checkout@v3
       - name: vcpkg
         run: |
-          pwd
-          mkdir .vcpkg
-          touch .vcpkg/vcpkg.path.txt
-          ls -al
+          mkdir /home/runner/.vcpkg
+          touch /home/runner/.vcpkg/vcpkg.path.txt
           vcpkg integrate install
           vcpkg activate
       - name: csolution
